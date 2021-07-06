@@ -23,4 +23,29 @@ let numbers = [1,3,5,7]
   })
 }
 
+//examples translating machine
+
+let encodeVowelWord = (word) => {
+  let vowels = ["a", "e", "i", "o", "u"]
+  let translatedWord;
+  for(let i = 0; i < vowels.length; i += 1) {
+    if(vowels[i] === word[0]) {
+      translatedWord = `${word}-yay`
+    }
+  }
+  console.log(`Translation: ${translatedWord}`)
+}
+encodeVowelWord('asshat')
+
+let encodeConsonantWord = (word) => {
+  return ""
+}
+
+let encodeWord = (word) => {
+  return ""
+}
+
+let encodeText = (word) => {
+  return ""
+}
 
