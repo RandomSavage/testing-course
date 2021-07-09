@@ -1,6 +1,21 @@
 import {expect, test} from '@jest/globals'
-import {add, minus} from './lib'
+import {add, minus, multiply} from './lib'
 import { getType } from 'jest-get-type'
+
+let numbers = [
+  [2,2,4],
+  [5,2,10],
+  [5,5,25]
+]
+
+describe('Testing multiply() function', () => {
+  test.each(numbers)('Multiply %i * %i = %i', (a,b,c) => {
+    expect(multiply(a,b)).toBe(c)
+  })
+  test('if a function has no parameters, it should return null', () => {
+    expect(multiply()).toBeNull()
+  })
+})
 
 
 describe('Testing add() function', () => {
@@ -21,8 +36,6 @@ describe('Testing add() function', () => {
 
   test('if a function has no parameters, it should return null', () => {
     expect(add()).toBeNull()
-
-  
   })
 })
 
